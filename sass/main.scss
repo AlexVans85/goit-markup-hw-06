@@ -163,9 +163,7 @@ ul {
   text-decoration: none;
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .contacts {
-  margin: 100px;
-} */
+
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
@@ -175,14 +173,11 @@ ul {
 
 .hero {
   background-color: #2f303a;
-  /* outline: 2px solid tomato; */
+
   text-align: center;
-  height: 600px;
   padding-top: 200px;
   padding-bottom: 210px;
-  /* padding-left: 452px;
-  padding-right: 452px; */
-  /* background-image: rgba(47, 48, 58, 0.4); */
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/hero/Imgheroclean.jpg);
   max-width: 1600px;
@@ -199,7 +194,6 @@ ul {
   letter-spacing: 0.06em;
   margin: 0 0 40px 0;
   text-transform: uppercase;
-  padding-top: 200px;
 }
 
 .button {
@@ -314,7 +308,7 @@ ul {
   text-align: start;
   position: relative;
   font-weight: normal;
-  font-size: 12 px;
+  font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
@@ -527,6 +521,12 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
+  transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .contact-title:hover,
+.footer .contact-title:focus {
+  color: var(--accent-color);
 }
 
 /* filter button */
@@ -605,6 +605,10 @@ ul {
 .work-list .link {
   text-decoration: none;
   position: relative;
+}
+
+.work-list .link:hover {
+  color: #2f303a;
 }
 
 /* text of card */
@@ -689,8 +693,13 @@ ul {
   overflow: hidden;
 }
 
-.work-list .card:hover .discr {
+.work-list .link:hover .discr,
+.work-list .link:focus .discr {
   transform: translateY(-100%);
+}
+
+.work-list .link .work-list .link:focus {
+  transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list .item {
@@ -698,11 +707,15 @@ ul {
   margin-top: 30px;
   /* background-color: red; */
   width: calc(100% / 3 - 30px);
-  transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-list .item:hover,
-.work-list .item:focus {
+.work-list .link:hover,
+.work-list .link:focus {
+  transform: translateY(-100%);
+}
+
+.work-list .link:hover,
+.work-list .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .container-cards {
@@ -746,7 +759,6 @@ img {
   display: block;
   content: "";
   height: 120px;
-  /* background-image: url(/img/locator.png); */
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--secondary-bg-color);
@@ -756,7 +768,7 @@ img {
 }
 
 .feature-list .antena::before {
-  background-image: url(../img/utp/antena.svg);
+  background-image: url(../img/utp/antenna.svg);
 }
 
 .feature-list .clock::before {
@@ -764,11 +776,11 @@ img {
 }
 
 .feature-list .diagr::before {
-  background-image: url(../img/utp/diagramm.svg);
+  background-image: url(../img/utp/diagram.svg);
 }
 
 .feature-list .cosmo::before {
-  background-image: url(../img/utp/astron.svg);
+  background-image: url(../img/utp/astronaut.svg);
 }
 
 .client-list {
@@ -784,17 +796,18 @@ img {
 }
 
 .client-list .item {
-  border: 1px solid #afb1b8;
   width: calc(100% / 6 - 30px);
-  margin-bottom: 20px;
   margin-left: 30px;
-  text-align: center;
-  border-radius: 4px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 63px;
-  padding-left: 63px;
+  border-radius: 5px;
+}
 
+.client-list .btn {
+  display: flex;
+  border: 1px solid #afb1b8;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -817,12 +830,9 @@ img {
   height: 44px;
   border-radius: 50%;
   /* background-color: rgb(189, 26, 26); */
+  transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons-svg {
-  width: 20px;
-  height: 20px;
-}
 .env-icons-svg {
   width: 16px;
   height: 12px;
@@ -851,20 +861,25 @@ img {
   margin-right: 10px;
 }
 
-.icon-contacts-link:hover .env-icons-svg {
+.icon-contacts-link:hover .env-icons-svg,
+.icon-contacts-link:focus .env-icons-svg {
   fill: var(--accent-color);
 }
 
-.icon-contacts-link:hover .phone-icons-svg {
+.icon-contacts-link:hover .phone-icons-svg,
+.icon-contacts-link:focus .phone-icons-svg {
   fill: var(--accent-color);
 }
 
-.social-icons-link:hover .social-icons-svg {
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
   fill: var(--accent-color);
 }
 
 .social-icons-svg {
-  fill: var(--primary-text-color);
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -876,7 +891,7 @@ img {
 .logo-icons-svg {
   // width: 80px;
   // height: 80px;
-  fill: var(--primary-text-color);
+  fill: #afb1b8;
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -898,8 +913,13 @@ img {
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-list-item-footer:hover,
-.socials-list-item-footer:focus {
+// .socials-list-item-footer:hover,
+// .socials-list-item-footer:focus {
+//   background-color: var(--accent-color);
+// }
+
+.social-icons-link:hover,
+.social-icons-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -911,6 +931,7 @@ img {
   fill: var(--primary-bg-color);
   width: 20px;
   height: 20px;
+  transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-title-footer {
@@ -920,9 +941,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-bg-color);
-}
-.container-footer > div {
-  // flex-basis: calc((100% - 60px) / 3);
 }
 
 .container-footer {
@@ -963,7 +981,7 @@ img {
 }
 
 .footer-form {
-  margin-right: 12x;
+  margin-right: 12px;
 }
 
 .footer-form-button {
@@ -1055,6 +1073,7 @@ img {
   right: 8px;
   width: 30px;
   height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transition: all var(--time-animation) cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1066,4 +1085,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
