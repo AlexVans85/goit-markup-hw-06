@@ -69,7 +69,7 @@
             </button>
 
             <!-- Форма -->
-            <form class="contact-us" action="">
+            <form class="contact-us" action="#">
               <p class="contact-us-title">Оставьте свои данные, мы вам перезвоним</p>
 
               <!-- имя в форме -->
@@ -90,18 +90,18 @@
                     <use href="./spriteform.svg#icon-phone"></use>
                   </svg>
                   <span>Телефон</span>
-                  <input type="text" name="tel" id="tel" />
+                  <input type="tel" name="tel" id="tel" />
                 </label>
               </div>
 
               <!-- имейл в форме -->
               <div class="form-field qwer">
-                <label class="form-field-name" for="mail">
+                <label class="form-field-name" >
                   <svg class="form-icons-svg">
                     <use href="./spriteform.svg#icon-mail"></use>
                   </svg>
                   <span>Почта</span>
-                  <input type="text" name="mail" id="mail" />
+                  <input type="email" name="mail"/>
                 </label>
               </div>
 
@@ -592,8 +592,9 @@
         <!-- инпут в футере -->
         <div class="container-footer-form">
           <h2 class="section-title-footer">Подпишитесь на рассылку</h2>
-          <label class="footer-form" for="mail">
-            <input class="footer-input" type="text" name="mail" id="mail" placeholder="E-mail" />
+          <label class="footer-form" >
+            <input class="footer-input" type="email" name="mail"  placeholder="E-mail" />
+            <!-- <input type="email" name="mail" id="mail" /> -->
           </label>
 
           <button class="footer-form-button">
